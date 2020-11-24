@@ -6,6 +6,7 @@
 const express = require("express");
 const app = express();
 
+// v2です
 app.get('/v1/inspections/:searchType/:code', (req, res) => {
   
   // URLパラメータ取得
@@ -21,11 +22,15 @@ app.get('/v1/inspections/:searchType/:code', (req, res) => {
     res.status(403).send();
     return;
   }
-  else if (reqHeader_companyCode == "000001" &&
+  else if (reqHeader_companyCode == "000002" &&
             (
               (param_searchType == "MC" && param_code == "20166184") ||
            (param_searchType == "MC" && param_code == "20166027") ||
            (param_searchType == "MC" && param_code == "20236861") ||
+    (param_searchType == "MC" && param_code == "20163423") ||
+    (param_searchType == "MC" && param_code == "20165645") ||
+    (param_searchType == "MC" && param_code == "20165678") ||
+    (param_searchType == "MC" && param_code == "20174043") ||
               (param_searchType == "SC" && param_code == "9876543210")
             )
           )
@@ -49,33 +54,33 @@ app.get('/v1/inspections/:searchType/:code', (req, res) => {
         "BusinessDiscussionID":Number(BusinessDiscussionID),
         "AssessmentId":AssessmentId,
         "DataKind":1,
-        "CarKindCode":"03",
+        "CarKindCode":1,
         "RegisterNoKey":"横浜　　３　　あ　　　１",
-        "Delta0001":"16",
-        "FirstRegisterYm":"198009",
+        "ExportArrangementNumber":"16",
+        "FirstRegisterYm":"0710",
         "CarNoHyphen":"TU31-301901",
-        "Delta0002":"120",
+        "ShadaiNumStampingPosition":"120",
         "Model":"DBA-TU31",
         "EngineModel":"QR25",
         "FrontFrontAxleWeight":"0094",
         "FrontRearAxleWeight":"0165",
         "RearFrontAxleWeight":"0058",
         "RearRearAxleWeight":"0077",
-        "Delta0003":"10",
-        "Delta0004":"100",
-        "Delta0005":"1",
-        "Delta0006":"1",
-        "Delta0007":"C",
-        "Delta0008":"1234",
-        "Delta0009":"12345",
-        "Delta0010":"080201",
-        "Delta0011":"2",
-        "Delta0012":"1",
+        "NoiseRegulation":"10",
+        "ProximityExhustNoiseLimits":"100",
+        "DriveSystem":"1",
+        "MeasurementCarOpashimeta":"1",
+        "MesurementModeNOxPM":"C",
+        "NOxValue":"1234",
+        "PMValue":"12345",
+        "SecurityStandardsAppliedDate":"080201",
+        "NumberPlateSize":"2",
+        "ReportType":"1",
         "CarName":"ﾄﾖﾀ",
         "FuelCode":"1",
         "ModelNo":"15028",
         "TypeClassificationNo":"0231",
-        "Delta0013":"乗用車（普通）",
+        "UseType":"乗用車（普通）",
         "CarShape":"02",
         "CarCapacity":"5",
         "MaxCarryingCapacity":"3000",
@@ -83,8 +88,9 @@ app.get('/v1/inspections/:searchType/:code', (req, res) => {
         "CarTotalWeight":"1785",
         "Length":"4860",
         "Width":"1795",
+        "Height":"1420",
         "DisplacementOrRatedOutput":"2378",
-        "InspectionCertificateExpireDate":"20070707",
+        "InspectionCertificateExpireDate":"190509",
         "InsertDate":"2013-09-25 14:35:00.82",
         "UpdateDate":"2013-09-25 14:35:00.82",
         "DeleteFlag":"1"
