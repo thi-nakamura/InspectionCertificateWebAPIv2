@@ -25,12 +25,6 @@ app.get('/v1/inspections/:searchType/:code', (req, res) => {
   else if (reqHeader_companyCode == "000002" &&
             (
               (param_searchType == "MC" && param_code == "20166184") ||
-           (param_searchType == "MC" && param_code == "20166027") ||
-           (param_searchType == "MC" && param_code == "20236861") ||
-    (param_searchType == "MC" && param_code == "20163423") ||
-    (param_searchType == "MC" && param_code == "20165645") ||
-    (param_searchType == "MC" && param_code == "20165678") ||
-    (param_searchType == "MC" && param_code == "20174043") ||
               (param_searchType == "SC" && param_code == "9876543210")
             )
           )
@@ -86,9 +80,9 @@ app.get('/v1/inspections/:searchType/:code', (req, res) => {
         "MaxCarryingCapacity":"3000",
         "CarWeight":"1510",
         "CarTotalWeight":"1785",
-        "Length":"4860",
-        "Width":"1795",
-        "Height":"1420",
+        "Length":"486",
+        "Width":"179",
+        "Height":"142",
         "DisplacementOrRatedOutput":"2378",
         "InspectionCertificateExpireDate":"190509",
         "InsertDate":"2013-09-25 14:35:00.82",
